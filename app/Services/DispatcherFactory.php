@@ -10,12 +10,8 @@ class DispatcherFactory implements ServiceProviderInterface
 {
     public function get(ContainerInterface $container)
     {
-        return new Middlewares\Utils\Dispatcher([
-            $container->get('ResponseTime'),
+        $middlewares = $container->get('Middlewares');
 
-            function () use ($container) {
-                echo $container->get('Message')->getMessage();
-            }
-        ]);
+        return new Middlewares\Utils\Dispatcher($middlewares);
     }
 }
