@@ -3,7 +3,7 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-$container = new Demo\Container('App\\Services\\');
+$container = new App\Container\Container('App\\Services\\');
 
 $dispatcher = $container->get('Dispatcher');
 $request = $container->get('ServerRequest');

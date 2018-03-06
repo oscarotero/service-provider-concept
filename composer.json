@@ -18,7 +18,6 @@
     },
     "autoload": {
         "psr-4": {
-            "Demo\\": "src/",
             "Interop\\ServiceProvider\\": "interop-service-provider/",
             "App\\": "app/"
         }
